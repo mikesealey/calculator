@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <script src="script.js"></script>
+    <link rel="stylesheet" href="styles.css">
+    <!--
+    <link rel="stylesheet" media="screen" href="https://fontlibrary.org//face/segment14" type="text/css"/>
+    font disabled for now - Decimal Point displays as hyphen, no good for a calculator!
+    -->
+</head>
+<body>
+    <div id="overall">
+        <div class="row result">
+            <div id="output">0</div>
+        </div>
+        <div class="row zero">
+            <button id="clear" onclick="clearButton()">CLEAR</button>
+            <button id="delete" onclick="deleteButton(`str`)">DELETE</button>
+        </div>
+        <div class="row one">
+            <button id="add" class="operator"onclick="operatorButton(`+`)">+</button>
+            <button id="7" onclick="numberButton(7)">7</button>
+            <button id="8" onclick="numberButton(8)">8</button>
+            <button id="9" onclick="numberButton(9)">9</button>
+
+        </div>
+        <div class="row two" >
+            <button id="subtract" class="operator"onclick="operatorButton(`-`)">-</button>
+            <button id="4" onclick="numberButton(4)">4</button>
+            <button id="5" onclick="numberButton(5)">5</button>
+            <button id="6" onclick="numberButton(6)">6</button>
+
+        </div>
+        <div class="row three">
+            <button id="multiply" class="operator" onclick="operatorButton(`*`)">x</button>
+            <button id="1" onclick="numberButton(1)">1</button>
+            <button id="2" onclick="numberButton(2)">2</button>
+            <button id="3" onclick="numberButton(3)">3</button>
+
+        </div>
+        <div class="row four">
+            <button id="divide" class="operator" onclick="operatorButton(`=`)">/</button>
+            <button id="0" onclick="numberButton(0)">0</button>
+            <button id="decimal" onclick="numberButton(`.`)">.</button>
+            <button id="equals" onclick="operatorButton(`=`)">=</button>
+
+        </div>
+
+    </div>
+</body>
+</html>
