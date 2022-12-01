@@ -8,11 +8,6 @@ body {
 
 }
 
-.overall {
-    display: flex;
-    flex-direction: row;
-}
-
 .row {
     display: flex;
     max-width: 450px;

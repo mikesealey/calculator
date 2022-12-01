@@ -9,13 +9,21 @@
     <link rel="stylesheet" href="styles.css">
     <!--
     <link rel="stylesheet" media="screen" href="https://fontlibrary.org//face/segment14" type="text/css"/>
-    font disabled for now - Decimal Point displays as hyphen, no good for a calculator!
+     font disabled for now - Decimal Point displays as hyphen, no good for a calculator!
     -->
 </head>
 <body>
     <div id="overall">
         <div class="row result">
-            <div id="output">0</div>
+            <div class="top row">
+                <div>PH</div>
+                <div id="previous-operand">0</div>
+            </div>
+            <div class="bottom row">
+                <div>=</div>
+                <div id="current-operand">0</div>
+            </div>
+            
         </div>
         <div class="row zero">
             <button id="clear" onclick="clearButton()">CLEAR</button>
@@ -43,10 +51,10 @@
 
         </div>
         <div class="row four">
-            <button id="divide" class="operator" onclick="operatorButton(`=`)">/</button>
+            <button id="divide" class="operator" onclick="operatorButton(`/`)">÷</button>
             <button id="0" onclick="numberButton(0)">0</button>
             <button id="decimal" onclick="numberButton(`.`)">.</button>
-            <button id="equals" onclick="operatorButton(`=`)">=</button>
+            <button id="equals" onclick="equalsButton()">=</button>
 
         </div>
 
