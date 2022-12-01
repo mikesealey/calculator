@@ -24,9 +24,6 @@ function test() {
 function maths(a, b, c) {
     console.log("function maths() was called with arguments")
     console.log("a = " + a + "  b = " + b + "  c = " + c)
-    // 20:53 Wednesday this bit isn't working and it's throwing a NaN
-    // 09:40 Thursday - It's not working because a includes the symbol that defines b
-    // without removing it - cut it off when defining b
     if (b == "+") {
         previousOperand = Number(a) + Number(c) 
     } else if (b == "-") {
@@ -69,6 +66,7 @@ function updateDisplay() {// 0.2 * 3 == 0.6000000001 Write something to fix this
 
 function operatorButton(operator) {
     // Is there a symbol anywhere in the top row?
+    equalsbuttonpressed = false
     if (currentOperand.includes("+") || currentOperand.includes("-") || currentOperand.includes("*") || currentOperand.includes("/")) {
         console.log("Option 1")
         console.log("Operator " + operator + " pressed, but already present") // Could write something to change symbol from the one already pressed to the newly pressed one
