@@ -13,6 +13,7 @@ There are still a handful of artifacts I'd like to address, but for now (07/12/2
 
 Still on the to-do list
 - SCRIPT address the rounding issues with floating-point numbers and IEEE754 (0.2*3=0.6000000001)
+- SCRIPT add keyboard functionality
 - 
 - SCRIPT/STYLE No obvious way to change polarity(?) of a number - current setup treats the "-" button as subtract only.
     consider adding "+/-" button and function
