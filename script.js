@@ -58,9 +58,14 @@ function maths(a, b, c) {
 }
 
 function deleteButton() {
-    if (currentOperand.length > 0) {
-            currentOperand = currentOperand.substring(0, currentOperand.length-1)
-    } else {
+    if (currentOperand.length > 0) {  // If there's some thing to delete
+            currentOperand = currentOperand.substring(0, currentOperand.length-1) // Then delete!
+    // If currentOperand is empty, AND previousOperand ends on a symbol
+    } else if (currentOperand.length == 0 && includesSymbol(previousOperand) === "last") { 
+        // Pull it down from previousOperand and delete the symbol
+        currentOperand = previousOperand.substring(0, previousOperand.length-1)
+        previousOperand = ""
+    } else {// Nothing in currentOperand, pull previousOperand down to currentOperand
         currentOperand = previousOperand
         previousOperand = ""
     }
@@ -204,6 +209,7 @@ Still To Do:
 
 Numbers greater than approximately 18 characters long will overflow
 the calculator screen. Consider adding in a function to limit their apparent length
+    edit to add - currently limiting the input length, but addition and multiplication circumnavigate this
 
 Tweak display or clear-function to negate the placeholder text in the HTML file
 
